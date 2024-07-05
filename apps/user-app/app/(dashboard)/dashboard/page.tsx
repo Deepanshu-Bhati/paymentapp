@@ -1,7 +1,7 @@
 import { getServerSession } from 'next-auth'
-import { authoptions } from '../../lib/auth/route'
-import image from '../../../public/background2.avif'
 import Image from 'next/image'
+import image from '../../../public/background2.avif'
+import { authoptions } from '../../components/authoptions'
 export default async function(){
     const session = await getServerSession(authoptions)
     const id=JSON.stringify(session.user.id)

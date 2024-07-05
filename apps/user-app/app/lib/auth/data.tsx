@@ -1,9 +1,9 @@
 "use server"
 
-import { getServerSession } from "next-auth"
-import { authoptions } from "./route"
-import { redirect } from "next/navigation"
 import db from '@repo/db/client'
+import { getServerSession } from "next-auth"
+import { redirect } from "next/navigation"
+import { authoptions } from "../../components/authoptions"
 
 export const Data=async()=>{
     const session = await getServerSession(authoptions)

@@ -1,7 +1,6 @@
 import { getServerSession } from "next-auth";
-import { redirect } from 'next/navigation'
-import { authoptions } from "./lib/auth/route";
-import { Session } from "inspector";
+import { redirect } from 'next/navigation';
+import { authoptions } from "./components/authoptions";
 
 export default async function Page() {
   console.log("dione")

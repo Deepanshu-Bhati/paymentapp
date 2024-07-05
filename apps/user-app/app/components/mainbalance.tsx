@@ -1,9 +1,8 @@
 "use server"
 import db from '@repo/db/client'
 import { getServerSession } from 'next-auth'
-import { authoptions } from '../lib/auth/route'
 import { redirect } from 'next/navigation'
-import { error } from 'console'
+import { authoptions } from './authoptions'
 export default async function Balance(amount:number,to:string){
     console.log(amount,to+"name of the ");
     const session = await getServerSession(authoptions)

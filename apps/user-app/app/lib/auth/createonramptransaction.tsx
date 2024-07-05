@@ -1,8 +1,8 @@
 "use server"
 
-import { getServerSession } from "next-auth"
-import { authoptions } from "./route"
 import prisma from "@repo/db/client"
+import { getServerSession } from "next-auth"
+import { authoptions } from "../../components/authoptions"
 
 export async function createOnRampTransaction(amount:number,provider:string){
     const session = await getServerSession(authoptions)
